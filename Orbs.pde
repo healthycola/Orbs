@@ -4,7 +4,6 @@ void setup() {
 
 float index = 1.0;
 float n = 0;
-float totalRotation = 0.0;
 void draw() {
   background(#222222);
   stroke(0, 0);
@@ -24,20 +23,11 @@ void draw() {
   
   n++;
   if (n % 4 == 0) {
-    totalRotation += angleStepSize;
     index--;
-    //print(index);
-    //print(" ");
-    //print(index * angleStepSize);
-    //print(" ");
-    //println(index * angleStepSize + 2 * PI);
   }
   
-  saveFrame("f####.gif");
-  //println(2 * PI / angleStepSize);
-  //println(
-  //println(-2 * PI / angleStepSize - 1.0);
-  if (index < -4 * PI / angleStepSize) {
+  //saveFrame("f####.gif");
+  if (index < -4 * PI / angleStepSize + 1.5) {
     exit();
   }
 }
